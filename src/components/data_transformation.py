@@ -20,11 +20,15 @@ class DataTransformationConfig:
 
 class DataTransformation:
     def __init__(self):
+        # Initializes the object when an instance of the class is created
         self.data_transformation_config=DataTransformationConfig()
 
     def get_data_transformer_object(self):
         '''
         This function is responsible for data trnasformation
+        1) Imputation (both for numerical and categorical data)
+        2) Scaling (for both numerical and categorical data)
+        3) One-Hot Encoding (for categorical data)
         
         '''
         try:
